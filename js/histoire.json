@@ -1,0 +1,40 @@
+{
+    "histoire": [
+        {
+            "id": 0,
+            "texte": "bonjour héro",
+            "options": [
+                {
+                    "texte": "test",
+                    "fonction": "jouage(1)"
+                },
+                {
+                    "texte": "test2",
+                    "fonction": "jouage(1)"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "texte": "texte numero 2",
+            "options": [
+                {
+                    "texte": "test du texte 2",
+                    "fonction": "jouage(-1)"
+                },
+                {
+                    "texte": "test du texte 2",
+                    "fonction": "jouage(2)"
+                },
+                {
+                    "texte": "test du texte 2",
+                    "fonction": "jouage(2)"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "texte": ""
+        }
+    ]
+}

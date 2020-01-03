@@ -3,45 +3,11 @@
  */
 let zoneDeJeu = document.querySelector('body');
 let personnage;
-let jeu = [
-    {
-        id: 0,
-        texte: "salut",
-        options: [
-            {
-                texte: "test",
-                //texteSuivant: 1,
-                fonction: "jouage(1)"
-            },
-            {
-                texte: "test2",
-                //textSuivant: 1,
-                fonction: "jouage(1)"
-            }
-        ]
-    },
-    {
-        id: 1,
-        texte: "texte numero 2",
-        options: [
-            {
-                texte: "test du texte 2",
-                //texteSuivant: 2,
-                fonction: "jouage(-1)"
-            },
-            {
-                texte: "test du texte 2",
-                //texteSuivant: 2,
-                fonction: "jouage(2)"
-            },
-            {
-                texte: "test du texte 2",
-                //texteSuivant: 2,
-                fonction: "jouage(2)"
-            }
-        ]
-    }
-];
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'js/histoire.json', false);
+xhr.send(null);
+let jeu = JSON.parse(xhr.responseText);
+jeu = jeu.histoire;
 
 console.log(jeu);
 
@@ -60,15 +26,11 @@ function startGame() {
     choix1.innerHTML = 'Nouvelle Partie';
     let choix2 = document.createElement('span');
     choix2.innerHTML = 'Charger';   
-    let choix3 = document.createElement('span');
-    choix3.innerHTML = 'options';
     
     //les ajoute au DOM
     myDiv.appendChild(choix1);
     myDiv.appendChild(document.createElement('br'));
     myDiv.appendChild(choix2);
-    myDiv.appendChild(document.createElement('br'));
-    myDiv.appendChild(choix3);
     
     //set la classe active par défaut
     choix1.classList.add('active');
@@ -79,17 +41,12 @@ function startGame() {
         if (event.key === 'z' || event.key === 'Z' || event.key === 'ArrowUp') {
             if (document.getElementById('start').childNodes[0].classList.contains('active')) {
                 document.getElementById('start').childNodes[0].classList.remove('active');
-                document.getElementById('start').childNodes[4].classList.add('active');
+                document.getElementById('start').childNodes[2].classList.add('active');
                 return;
             }
             if (document.getElementById('start').childNodes[2].classList.contains('active')) {
                 document.getElementById('start').childNodes[2].classList.remove('active');
                 document.getElementById('start').childNodes[0].classList.add('active');
-                return;
-            }
-            if (document.getElementById('start').childNodes[4].classList.contains('active')) {
-                document.getElementById('start').childNodes[4].classList.remove('active');
-                document.getElementById('start').childNodes[2].classList.add('active');
                 return;
             }
         }
@@ -102,11 +59,6 @@ function startGame() {
             }
             if (document.getElementById('start').childNodes[2].classList.contains('active')) {
                 document.getElementById('start').childNodes[2].classList.remove('active');
-                document.getElementById('start').childNodes[4].classList.add('active');
-                return;
-            }
-            if (document.getElementById('start').childNodes[4].classList.contains('active')) {
-                document.getElementById('start').childNodes[4].classList.remove('active');
                 document.getElementById('start').childNodes[0].classList.add('active');
                 return;
             }
@@ -121,10 +73,6 @@ function startGame() {
             if (document.getElementById('start').childNodes[2].classList.contains('active')) {
                 //demander un code de sauvegarde
                 console.log("debug2");
-            }
-            if (document.getElementById('start').childNodes[4].classList.contains('active')) {
-                //modifier les options
-                console.log("debug3");
             }
         }
     };
@@ -178,10 +126,6 @@ function creationPerso() {
  * fonction qui permet de jouer
  */
 function jouage(index) {
-    if (index < 0) {
-        combat(index);
-        return;
-    }
     let i = index;
     clear();
     let texteAfficher = document.createElement('div');
@@ -201,24 +145,12 @@ function jouage(index) {
 }
 
 /*
- * fonction que gère les bombats
- */
-function combat(index) {
-    console.log("je fais un combat");
-}
-
-/*
  * FONCTION QUI CLEAR TOUT
  */
 function clear() {
     //clear de tout les event et autre
     zoneDeJeu.innerHTML = '';
     document.onkeypress = null;
-}
-
-
-function choixMainMenu(event) {
-    console.log(event);
 }
 
 startGame();
