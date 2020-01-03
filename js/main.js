@@ -72,7 +72,8 @@ function startGame() {
             }
             if (document.getElementById('start').childNodes[2].classList.contains('active')) {
                 //demander un code de sauvegarde
-                console.log("debug2");
+                charger();
+                return;
             }
         }
     };
@@ -125,8 +126,9 @@ function creationPerso() {
 /*
  * fonction qui permet de jouer
  */
-function jouage(index) {
+function jouage(index, defendre = false) {
     let i = index;
+    let defense = defendre ? "vous avez bloqué l'attaque ennemie <br />" : '';
     clear();
     let texteAfficher = document.createElement('div');
     texteAfficher.setAttribute('id', 'texteAfficher');
@@ -134,7 +136,7 @@ function jouage(index) {
     bouttonAfficher.setAttribute('id', 'bouttonAfficher');
     zoneDeJeu.appendChild(texteAfficher);
     zoneDeJeu.appendChild(bouttonAfficher);
-    texteAfficher.innerHTML = jeu[i].texte;
+    texteAfficher.innerHTML = defense + jeu[i].texte;
     jeu[i].options.forEach(function(element) {
         console.log(element);
         let newButton = document.createElement('button');
@@ -145,12 +147,53 @@ function jouage(index) {
 }
 
 /*
+ * fonction qui de rentrer son code de chargement
+ */
+function charger() {
+    clear();
+    ////
+    let myDiv = document.createElement('div');
+    myDiv.setAttribute('id', 'start');
+    zoneDeJeu.appendChild(myDiv);
+    ////
+    let myInputCode = document.createElement('input');
+    myInputCode.setAttribute('id', 'codeChargement');
+    myInputCode.setAttribute('placeholder', 'Code');
+    myDiv.appendChild(myInputCode);
+    ///
+    let myButtonValider = document.createElement('button');
+    myButtonValider.setAttribute('onclick', 'chargement()');
+    myButtonValider.innerHTML = "Charger";
+    myDiv.appendChild(myButtonValider);
+}
+
+/*
+ * fonction qui analyse le code et lance le jeu
+ */
+function chargement() {
+    let code = document.getElementById('codeChargement').value;
+    let tabCode = code.split('0');
+    console.log(tabCode);
+    if (isNaN(parseInt(tabCode[2])) || tabCode.length != 3 || ((tabCode[1] != "male") && (tabCode[1] != "femelle"))) {
+        alert("code invalide");
+        return;
+    }
+    if(parseInt(tabCode[2]) > 24 || parseInt(tabCode[2]) < 0) {
+        alert("code invalide");
+        return;
+    }
+    personnage = new Joueur(tabCode[0], tabCode[1]);
+    jouage(parseInt(tabCode[2], 10));
+    console.log(code);
+}
+
+/*
  * FONCTION QUI CLEAR TOUT
  */
 function clear() {
     //clear de tout les event et autre
     zoneDeJeu.innerHTML = '';
-    document.onkeypress = null;
+    document.onkeydown = null;
 }
 
 startGame();

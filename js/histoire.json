@@ -7,10 +7,6 @@
                 {
                     "texte": "test",
                     "fonction": "jouage(1)"
-                },
-                {
-                    "texte": "test2",
-                    "fonction": "jouage(1)"
                 }
             ]
         },
@@ -19,22 +15,330 @@
             "texte": "texte numero 2",
             "options": [
                 {
-                    "texte": "test du texte 2",
-                    "fonction": "jouage(-1)"
-                },
-                {
-                    "texte": "test du texte 2",
+                    "texte": "devenir un héro",
                     "fonction": "jouage(2)"
                 },
                 {
-                    "texte": "test du texte 2",
-                    "fonction": "jouage(2)"
+                    "texte": "renoncer",
+                    "fonction": "jouage(3)"
                 }
             ]
         },
         {
             "id": 2,
-            "texte": ""
+            "texte": "taverne ou shop",
+            "options": [
+                {
+                    "texte": "taverne",
+                    "fonction": "jouage(4)"
+                },
+                {
+                    "texte": "aventure",
+                    "fonction": "jouage(5)"
+                },
+                {
+                    "texte": "shop",
+                    "fonction": "jouage(6)"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "texte": "villageois FIN",
+            "options": [
+                {
+                    "texte": "recommencer",
+                    "fonction": "jouage(0)"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "texte": "info dans la taverne",
+            "options": [
+                {
+                    "texte": "partir à l'aventure",
+                    "fonction": "jouage(5)"
+                },
+                {
+                    "texte": "aller acheter du stuff",
+                    "fonction": "jouage(6)"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "texte": "sortir de la ville",
+            "options": [
+                {
+                    "texte": "combattre",
+                    "fonction": "jouage(7)"
+                },
+                {
+                    "texte": "fuir",
+                    "fonction": "jouage(3)"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "texte": "dans le shop",
+            "options": [
+                {
+                    "texte": "partir à l'aventure",
+                    "fonction": "jouage(5)"
+                },
+                {
+                    "texte": "aller chercher des infos",
+                    "fonction": "jouage(4)"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "texte": "combat sur sentier",
+            "options": [
+                {
+                    "texte": "attaquer",
+                    "fonction": "jouage(8)"
+                },
+                {
+                    "texte": "défendre",
+                    "fonction": "jouage(7, true)"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "texte": "monstre vaincu",
+            "options": [
+                {
+                    "texte": "visiter le village",
+                    "fonction": "jouage(9)"
+                },
+                {
+                    "texte": "continuer sa route",
+                    "fonction": "jouage(10)"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "texte": "dans le village",
+            "options": [
+                {
+                    "texte": "genocide",
+                    "fonction": "jouage(11)"
+                },
+                {
+                    "texte": "discuter",
+                    "fonction": "jouage(13)"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "texte": "monstre vaincu",
+            "options": [
+                {
+                    "texte": "rentrer chez les démons",
+                    "fonction": "jouage(15)"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "texte": "vous affrontez tout le village",
+            "options": [
+                {
+                    "texte": "attaquer",
+                    "fonction": "jouage(12)"
+                },
+                {
+                    "texte": "defendre",
+                    "fonction": "jouage(11, true)"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "texte": "vous avez rasé le village",
+            "options": [
+                {
+                    "texte": "raser tout",
+                    "fonction": "jouage(14)"
+                },
+                {
+                    "texte": "tout droit chez les demons",
+                    "fonction": "jouage(15)"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "texte": "vous faites la fete",
+            "options": [
+                {
+                    "texte": "aller faire la fete",
+                    "fonction": "jouage(16)"
+                },
+                {
+                    "texte": "tout droit chez les demons",
+                    "fonction": "jouage(15)"
+                },
+                {
+                    "texte": "rester au village",
+                    "fonction": "jouage(3)"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "texte": "vous detruisez tout sur votre passage puis penetrez chez les demons",
+            "options": [
+                {
+                    "texte": "continuer",
+                    "fonction": "jouage(17)"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "texte": "vous avez fait un long voyage sans répis, tout seul.<br/>un messager vous propose d'aller direct voir le roi",
+            "options": [
+                {
+                    "texte": "genocide",
+                    "fonction": "jouage(17)"
+                },
+                {
+                    "texte": "le suivre",
+                    "fonction": "jouage(19)"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "texte": "vous avez fait la fête avec tout les villageois que avez pu croisé durant le périple et arriver chez les démons.<br/>un messager vous propose d'aller direct voir le roi",
+            "options": [
+                {
+                    "texte": "genocide",
+                    "fonction": "jouage(17)"
+                },
+                {
+                    "texte": "le suivre",
+                    "fonction": "jouage(19)"
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "texte": "combat versus les démons",
+            "options": [
+                {
+                    "texte": "attaquer",
+                    "fonction": "jouage(18)"
+                },
+                {
+                    "texte": "défendre",
+                    "fonction": "jouage(17, true)"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "texte": "y a plus de démons",
+            "options": [
+                {
+                    "texte": "s'éxiler",
+                    "fonction": "jouage(20)"
+                },
+                {
+                    "texte": "rentrer",
+                    "fonction": "jouage(21)"
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "texte": "vous rencontrez le roi et apprenais la verité",
+            "options": [
+                {
+                    "texte": "s'éxiler",
+                    "fonction": "jouage(20)"
+                },
+                {
+                    "texte": "rentrer",
+                    "fonction": "jouage(22)"
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "texte": "vous avez fini votre quête et decider de rester tranquille dans un petit village<br />merci d'avoir jouer",
+            "options": [
+                {
+                    "texte": "recommencer",
+                    "fonction": "creationPerso()"
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "texte": "vous rentrez triomphant",
+            "options": [
+                {
+                    "texte": "tuer tout le monde",
+                    "fonction": "jouage(24)"
+                },
+                {
+                    "texte": "profiter",
+                    "fonction": "jouage(25)"
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "texte": "vous rentrez les mains vides et énervés",
+            "options": [
+                {
+                    "texte": "tuer tout le monde",
+                    "fonction": "jouage(24)"
+                },
+                {
+                    "texte": "se rebeller",
+                    "fonction": "jouage(25)"
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "texte": "vous avez tués tout le monde, il ne reste plus que vous<br />merci d'avoir jouer",
+            "options": [
+                {
+                    "texte": "recommencer",
+                    "fonction": "creationPerso()"
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "texte": "vous profitez de votre richesse nouvelle, des femmes et de votre status. mais vous retsez un toutou du roi<br />merci d'avoir jouer",
+            "options": [
+                {
+                    "texte": "recommencer",
+                    "fonction": "creationPerso()"
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "texte": "vous vous rebellez et mourrez executé pour trahison<br />merci d'avoir jouer",
+            "options": [
+                {
+                    "texte": "recommencer",
+                    "fonction": "creationPerso()"
+                }
+            ]
         }
     ]
 }
