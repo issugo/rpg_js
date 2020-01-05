@@ -1,7 +1,7 @@
 /*
  * variables globales utilisablent de partout qui doivent rester défini
  */
-let zoneDeJeu = document.querySelector('body');
+let zoneDeJeu = document.querySelector('#zoneDeJeu');
 let personnage;
 let xhr = new XMLHttpRequest();
 xhr.open('GET', 'js/histoire.json', false);
@@ -103,6 +103,7 @@ function creationPerso() {
     myButtonToCreate.innerHTML = 'Créer perso';
     //affichage de tout
     myDiv.appendChild(myInputName);
+    myInputName.focus();
     myDiv.appendChild(document.createElement('br'));
     myDiv.appendChild(myInputGenre);
     myDiv.appendChild(document.createElement('br'));
@@ -118,7 +119,29 @@ function creationPerso() {
         }
         let genreDuJoueur = document.getElementById('genre').value;
         personnage = new Joueur(nomDuJoueur, genreDuJoueur);
-        console.log(personnage);
+        
+        //setup du panel de stats
+        let myPanel = document.querySelector('#perso');
+        let myStatsPanel = document.createElement('div');
+        myStatsPanel.setAttribute('id', 'stats');
+        myPanel.appendChild(myStatsPanel);
+        let myStatName = document.createElement('span');
+        myStatName.innerHTML = '<strong>NOM: </strong>' + personnage.name;
+        myStatsPanel.appendChild(myStatName);
+        let myStatGenre = document.createElement('span');
+        myStatGenre.innerHTML = '<strong>SEXE: </strong>' + personnage.genre;
+        myStatsPanel.appendChild(myStatGenre);
+        let myStatHP = document.createElement('span');
+        myStatHP.innerHTML = '<strong>PV: </strong>' + personnage.hp;
+        myStatsPanel.appendChild(myStatHP);
+        let myStatForce = document.createElement('span');
+        myStatForce.innerHTML = '<strong>FORCE: </strong>' + personnage.force;
+        myStatsPanel.appendChild(myStatForce);
+        let myStatMana = document.createElement('span');
+        myStatMana.innerHTML = '<strong>MANA: </strong>' + personnage.mana;
+        myStatsPanel.appendChild(myStatMana);
+        
+        
         jouage(0);
     }
 }
@@ -130,13 +153,16 @@ function jouage(index, defendre = false) {
     let i = index;
     let defense = defendre ? "vous avez bloqué l'attaque ennemie <br />" : '';
     clear();
+    let myDiv = document.createElement('div');
+    myDiv.setAttribute('id', 'start');
     let texteAfficher = document.createElement('div');
     texteAfficher.setAttribute('id', 'texteAfficher');
     let bouttonAfficher = document.createElement('div');
     bouttonAfficher.setAttribute('id', 'bouttonAfficher');
-    zoneDeJeu.appendChild(texteAfficher);
-    zoneDeJeu.appendChild(bouttonAfficher);
-    texteAfficher.innerHTML = defense + jeu[i].texte;
+    zoneDeJeu.appendChild(myDiv);
+    myDiv.appendChild(texteAfficher);
+    myDiv.appendChild(bouttonAfficher);
+    texteAfficher.innerHTML = defense + jeu[i].texte.replace('%USERNAME%', personnage.name);
     jeu[i].options.forEach(function(element) {
         console.log(element);
         let newButton = document.createElement('button');
@@ -178,7 +204,7 @@ function chargement() {
         alert("code invalide");
         return;
     }
-    if(parseInt(tabCode[2]) > 24 || parseInt(tabCode[2]) < 0) {
+    if(parseInt(tabCode[2]) > 25 || parseInt(tabCode[2]) < 0) {
         alert("code invalide");
         return;
     }

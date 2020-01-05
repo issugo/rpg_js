@@ -41,6 +41,14 @@ body {
     height: 100%;
 }
 
+.trait {
+    border-bottom: 1px solid black;
+    width: 95%;
+    height: 5px;
+    display: block;
+    margin: auto;
+}
+
 #start {
     position: absolute;
     top: 50%;
@@ -51,4 +59,22 @@ body {
     padding: 26px 24px;
     text-align: center;
     font-weight: bold;
+}
+
+#perso {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8%;
+    height: 35vh;
+    width: 15vw;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#stats {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

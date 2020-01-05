@@ -2,17 +2,17 @@
     "histoire": [
         {
             "id": 0,
-            "texte": "bonjour héro",
+            "texte": "Bonjour %USERNAME% et bienvenue dans ton aventure",
             "options": [
                 {
-                    "texte": "test",
+                    "texte": "commencer",
                     "fonction": "jouage(1)"
                 }
             ]
         },
         {
             "id": 1,
-            "texte": "texte numero 2",
+            "texte": "Vous étiez tranquillement en train de faire un cour de JavaScript quand soudain vous avez entendu comme un gros bruit et un halo de lumière est apparu.<br /><br />Vous vous retrouvez dans une sorte de salle style moyen-age avec une plein de gens autour de vous. On vous explique que vous avez été invoqué d'un autre univers jusqu'ici pour devenir un héro et que malheureusement, il n'existe aucun moyen de vous ramenez chez vous ormis potentiellement en obtenant le pouvoir du roi des démons qui menace actuellement et que vous devez tuer.",
             "options": [
                 {
                     "texte": "devenir un héro",
@@ -26,7 +26,7 @@
         },
         {
             "id": 2,
-            "texte": "taverne ou shop",
+            "texte": "Après tout ce speach et cette reunion hypeeeeeeeer longue, vous comprenez pourquoi vous vous sentez si léger: vous êtes OVER CHEAT.<br><br>On vous propose alors plusieurs choses. Aller récolter des infos à la taverne potentiellement nul, aller acheter du stuff à la seule boutique de la capitale (oui, la SEULE) mais de toutes facon vos stats sont abusées ou alors directement partir à l'aventure.",
             "options": [
                 {
                     "texte": "taverne",
@@ -44,7 +44,7 @@
         },
         {
             "id": 3,
-            "texte": "villageois FIN",
+            "texte": "Vous avez finalement décider de devenir simplement un professeur dans le premier village trouvé et d'y vivre paisiblement. Dommage, vous ne finirez donc pas votre quête.",
             "options": [
                 {
                     "texte": "recommencer",
@@ -54,7 +54,7 @@
         },
         {
             "id": 4,
-            "texte": "info dans la taverne",
+            "texte": "Vous entrez dans la taverne et là, tout le monde se stop et vous regarde, vous l'étranger du village. Vous traverser les tables et comme l'a dit le narateur, il n'y a absolument aucune info utile ormis que la bière vaut l'équivalent de 3€ la pinte. Vous pouvez don soit partir à l'aventure soit aller acheter du stuff (alors que je rappelle, vous êtes abusés) .",
             "options": [
                 {
                     "texte": "partir à l'aventure",
@@ -68,7 +68,7 @@
         },
         {
             "id": 5,
-            "texte": "sortir de la ville",
+            "texte": "Vous sortez finalement de la ville et emprunté le premier sentier que vous voyez (ca faisait stylé pour raconter, en vrai c'est juste le seul) et au bout de quelques kilomètre de marche : UN MONSTRE. Vous avez à la fois peur et à la fois vous êtes confiant grâce à vos stats mais vous ne savez pas comment cela peut résulter.",
             "options": [
                 {
                     "texte": "combattre",
@@ -82,7 +82,7 @@
         },
         {
             "id": 6,
-            "texte": "dans le shop",
+            "texte": "Vous entrez dans la SEULE (bordel, c'est une capitale quand même) boutique de la ville et vous voyez de tout sauf évidement ce dont vous pourriez avoir besoin (ça serait trop facile sinon) c'est-a-dire de l'équipement. En fait, il y en a mais .... bref ..<br /><br />Vous pouvez donc partir à l'aventure à main nue ou alors essayé d'aller chercher des infos à la taverne mais personne n'est sure du résultat.",
             "options": [
                 {
                     "texte": "partir à l'aventure",
@@ -96,7 +96,7 @@
         },
         {
             "id": 7,
-            "texte": "combat sur sentier",
+            "texte": "vous lancez le combat et CA FAIT BIM BAM BOUM .. desole, je reprends.<br>Vous lancez donc le combat, plein de courage contre un kobold.",
             "options": [
                 {
                     "texte": "attaquer",
@@ -110,7 +110,7 @@
         },
         {
             "id": 8,
-            "texte": "monstre vaincu",
+            "texte": "Vous avez finalement vaincu le terrible monstre qui se dresser sur votre chemin (en vrai, il etait juste hyper faible et vous hyper fort et vous l'avez OneShot mais c'est moins héroïque). Vous pouvez maintenant soit vous rendre au premier village de votre périple ou alors continuer votre route.",
             "options": [
                 {
                     "texte": "visiter le village",
@@ -124,7 +124,7 @@
         },
         {
             "id": 9,
-            "texte": "dans le village",
+            "texte": "Vous rencontrez des personnes autres que les gens de la capitale. Mais un problème surgit, vous avez comme des pulsions (dans votre corps, envie dans finir avec ces bouffons #MechantOuMechant). Vous les réfrénais du mieux que vous pouvez.",
             "options": [
                 {
                     "texte": "genocide",
@@ -138,7 +138,7 @@
         },
         {
             "id": 10,
-            "texte": "monstre vaincu",
+            "texte": "Vous avez finalement vaincu le terrible monstre qui se dresser sur votre chemin (en vrai, il etait juste hyper faible et vous hyper fort et vous l'avez OneShot mais c'est moins héroïque).<br><br>Vous pouvez à présent continuer votre route jusqu'au territoire des démons.",
             "options": [
                 {
                     "texte": "rentrer chez les démons",
@@ -148,7 +148,7 @@
         },
         {
             "id": 11,
-            "texte": "vous affrontez tout le village",
+            "texte": "Vous n'avez pas pu refrener vos pulsions meurtrière et decidez d'affronter tout le village d'un coup.",
             "options": [
                 {
                     "texte": "attaquer",
@@ -162,7 +162,7 @@
         },
         {
             "id": 12,
-            "texte": "vous avez rasé le village",
+            "texte": "vous avez finalement rasé le village et l'avait totalement détruit, plus une seule âme ne réside maintenant en ces lieux. Mais vous sentez que vos plusions ne sont pas satisfaites, le seule moyen que vous avez est de ne plus entrer en contact avec une seule âme humaine. Vous pouvez donc soit succomber à vos démons, soit décider de tracervotre route.",
             "options": [
                 {
                     "texte": "raser tout",
@@ -176,7 +176,7 @@
         },
         {
             "id": 13,
-            "texte": "vous faites la fete",
+            "texte": "Vous n'avez pas succomber à vos pulsions et vous vous rendez compte que les villageois sont tous très gentils. Vous passer donc votre soirée à faire la fête avec les locaux.<br /><br />Le lendemain, vous reprenez la route, vous don aller faire la fête dans les autres villages, aller chez les démons ou rester au village (ils étaient quand même sympa).",
             "options": [
                 {
                     "texte": "aller faire la fete",
@@ -204,7 +204,7 @@
         },
         {
             "id": 15,
-            "texte": "vous avez fait un long voyage sans répis, tout seul.<br/>un messager vous propose d'aller direct voir le roi",
+            "texte": "vous avez fait un long voyage sans répis, tout seul.<br/>Lorsque vous entrez sur le territoire des démons, un messager vous propose d'aller direct voir le roi. Vous ressentez tout de même de grosse pulsions.",
             "options": [
                 {
                     "texte": "genocide",
@@ -218,7 +218,7 @@
         },
         {
             "id": 16,
-            "texte": "vous avez fait la fête avec tout les villageois que avez pu croisé durant le périple et arriver chez les démons.<br/>un messager vous propose d'aller direct voir le roi",
+            "texte": "vous avez fait la fête avec tout les villageois que avez pu croisé durant le périple et arriver chez les démons, un messager vous propose d'aller direct voir le roi",
             "options": [
                 {
                     "texte": "genocide",
@@ -232,7 +232,7 @@
         },
         {
             "id": 17,
-            "texte": "combat versus les démons",
+            "texte": "Vous ne résistez pas à vos pulsions et décider de tuer tout les démons un par un.",
             "options": [
                 {
                     "texte": "attaquer",
@@ -246,7 +246,7 @@
         },
         {
             "id": 18,
-            "texte": "y a plus de démons",
+            "texte": "Vous avez finalement éradiquer tout les démons présent sur le continent. Maintenant que votre quête est fini, il ne vous reste plus qu'une chose à faire, retourner voir le roi ou aller vivre quelque part, tranquillement.",
             "options": [
                 {
                     "texte": "s'éxiler",
@@ -260,7 +260,7 @@
         },
         {
             "id": 19,
-            "texte": "vous rencontrez le roi et apprenais la verité",
+            "texte": "Vous rencontrez le roi des démons et vous apprenais qu'à l'origine, les démons étaient des humains qui ont servis de cobaye lors d'expérience sous la directive du roi. Vous apprenez également que les démons n'ont jamais rien fait aux autres humains et que le roi vous a demandé de les éradiquer pour cacher la vérité à son peuple.",
             "options": [
                 {
                     "texte": "s'éxiler",
@@ -277,14 +277,14 @@
             "texte": "vous avez fini votre quête et decider de rester tranquille dans un petit village<br />merci d'avoir jouer",
             "options": [
                 {
-                    "texte": "recommencer",
-                    "fonction": "creationPerso()"
+                    "texte": "menu",
+                    "fonction": "startGame()"
                 }
             ]
         },
         {
             "id": 21,
-            "texte": "vous rentrez triomphant",
+            "texte": "vous rentrez triomphant dans la capitale. Votre quête est fini mes vos pultions, toujours non satisfaites.",
             "options": [
                 {
                     "texte": "tuer tout le monde",
@@ -298,7 +298,7 @@
         },
         {
             "id": 22,
-            "texte": "vous rentrez les mains vides et énervés",
+            "texte": "vous rentrez les mains vides et énervés de la vérité que vous venez d'apprendre.",
             "options": [
                 {
                     "texte": "tuer tout le monde",
@@ -315,8 +315,8 @@
             "texte": "vous avez tués tout le monde, il ne reste plus que vous<br />merci d'avoir jouer",
             "options": [
                 {
-                    "texte": "recommencer",
-                    "fonction": "creationPerso()"
+                    "texte": "menu",
+                    "fonction": "startGame()"
                 }
             ]
         },
@@ -325,8 +325,8 @@
             "texte": "vous profitez de votre richesse nouvelle, des femmes et de votre status. mais vous retsez un toutou du roi<br />merci d'avoir jouer",
             "options": [
                 {
-                    "texte": "recommencer",
-                    "fonction": "creationPerso()"
+                    "texte": "menu",
+                    "fonction": "startGame()"
                 }
             ]
         },
@@ -335,8 +335,8 @@
             "texte": "vous vous rebellez et mourrez executé pour trahison<br />merci d'avoir jouer",
             "options": [
                 {
-                    "texte": "recommencer",
-                    "fonction": "creationPerso()"
+                    "texte": "menu",
+                    "fonction": "startGame()"
                 }
             ]
         }
